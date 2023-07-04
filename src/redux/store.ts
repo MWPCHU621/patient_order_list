@@ -5,12 +5,15 @@ import counterReducer from './features/counterSlice';
 import patientListReducer from './features/patientListSlice';
 import patientReducer from './features/patientSlice';
 import orderReducer from './features/orderSlice';
+import orderListReducer from './features/orderListSlice';
 
 export const store = configureStore({
     reducer: {
         counter: counterReducer,
         patientList: patientListReducer,
-        patient: patientReducer
+        patient: patientReducer,
+        orderList: orderListReducer,
+        order: orderReducer
     }
 });
 

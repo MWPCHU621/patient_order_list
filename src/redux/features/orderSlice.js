@@ -5,13 +5,16 @@ const initialState = {
     message: ''
 }
 
-export const patientSlice = createSlice({
-    name: 'patient',
+export const orderSlice = createSlice({
+    name: 'order',
     initialState,
     reducers: {
-        
+        setOrder: (state, actions) => {
+            state.id = actions.payload.id;
+            state.message = actions.payload.message;
+        }
     }
 });
 
-export const {  } = patientSlice.actions;
-export default patientSlice.reducer;
+export const { setOrder } = orderSlice.actions;
+export default orderSlice.reducer;
